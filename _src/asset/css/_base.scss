@@ -172,6 +172,9 @@ body {
 	font-size: $unit*1.6;
 	font-family: $font-family;
 	background-color: $c-bg;
+	@include mq(sm){
+		line-height: 1.5;
+	}
 }
 p {
 	line-height: 1.8;
