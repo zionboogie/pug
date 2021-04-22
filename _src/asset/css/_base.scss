@@ -20,7 +20,7 @@ $mg: 10px; // 余白の最小単位
 =========================================================*/
 // カラー
 $c-bg: #fff;	// 背景色
-$c-font: #252f39;	// フォントカラー
+$c-text: #252f39;	// フォントカラー
 $c-line: #959595;	// 線の色
 $c-anchor: #000;	// リンク色
 $c-anchor-hover: #959595;	// ホバー時のリンク色
@@ -152,6 +152,7 @@ $w-content: 1080px;
 	padding: 0 $mg*4;
 	@include mq(sm){
 		padding: 0;
+		width: 95%;
 	}
 }
 
@@ -181,6 +182,8 @@ p {
 }
 a {
 	color: $c-anchor;
+	// アンカーのデフォルトホバー処理
+	transition: all 0.5s ease-out;
 	&:visited {
 		color: $c-anchor-visited;
 	}
@@ -194,9 +197,6 @@ a {
 	&:active {
 		color: $c-anchor-active;
 	}
-
-	// アンカーのデフォルトホバー処理
-	transition: all 0.5s ease-out;
 }
 h1,h2,h3,h4,h5,h6{
 }
